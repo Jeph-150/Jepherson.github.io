@@ -1,0 +1,570 @@
+/* ------------------------------------------- Every Page ------------------------------------------------------- */ 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 
+    'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+/* Nav bar */
+nav {
+    height: 80px;
+    background: #faf9f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw -130px)/2);
+}
+
+.logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+    margin-left: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 0 1.8rem;
+}
+
+nav a:hover{
+    color:#243cfc;
+}
+
+/* Footer */ 
+footer {
+    background: #dfddd0;
+    padding: 2rem 0;
+    text-align: center;
+    color: #000;
+    margin-bottom: 0%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex-basis: 33%;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-left a {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-left a:hover {
+    color: #ff9514;
+}
+
+.footer-right p {
+    margin: 0.2rem 0; /* Margin between lines */
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex-basis: 100%;
+    }
+
+    .footer-left {
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
+/* ------------------------------------------- Home Page ------------------------------------------------------- */ 
+/* Landing page*/
+.intro {
+    background: #faf9f3;
+}
+
+.intro-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px)/2);
+}
+
+.column-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #000;
+    padding: 0rem 2rem;
+}
+
+.column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.column-left p {
+    margin-bottom: 1 rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+button {
+    margin-top: 1.5rem; 
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+button:hover {
+    background: #ff9514;
+    color:#243cfc
+    ;
+}
+
+.column-right {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+.intro-image { 
+    width: 100%;
+    height: 100%;
+}
+
+/* About Us */ 
+.about{
+    background-color: #faf9f3;
+}
+.aboutUs {
+    background-color: #faf9f3;
+    width: 80%; 
+    margin: auto; 
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.aboutUs h1 {
+     font-size: 50px;
+}
+.aboutUs-container {
+    background-color: #faf9f3;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.para {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.testimonials {
+    background-color: #faf9f3;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonials h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #ecd9d9;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.testimonial span {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ------------------------------------------- Price Page ------------------------------------------------------- */ 
+/* Prices */
+.prices {
+    background-color: #faf9f3;
+}
+
+.prix {
+    background-color: #faf9f3;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.prix h1 {
+    font-size: 40px;
+    margin-bottom: 0px; 
+}
+
+.prix h2 {
+    margin-top: 5px; 
+    font-size: 50px;
+}
+
+.price-container {
+    background-color: #faf9f3;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.money {
+    background: #ecd9d9;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    width: 20%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 450px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.money p {
+    margin: 0; 
+}
+
+.money button {
+    align-self: center; 
+    margin-top: 10px; 
+}
+
+
+/* ------------------------------------------- Instructor Page ------------------------------------------------------- */ 
+
+/* Teachers */
+.teach {
+    background-color: #faf9f3;
+}
+
+.teacher {
+    background-color: #faf9f3;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.teacher h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.teacher h2 {
+    margin-top: 5px;
+    font-size: 50px;
+}
+
+.teacher-container {
+    background-color: #faf9f3;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.sensei {
+    background: #ecd9d9;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    width: 80%; 
+    max-width: 900px; 
+    display: flex;
+    align-items: center; 
+}
+
+.sensei img {
+    width: 200px; 
+    border-radius: 50%; 
+    margin-right: 20px; 
+}
+
+.sensei .info {
+    flex: 1;
+}
+
+.sensei h1 {
+    font-size: 30px;
+    text-align: right; 
+    margin-top: 0; 
+}
+
+.sensei p {
+    margin: 10px 0; 
+    text-align: justify; 
+}
+
+.sensei button {
+    margin-top: 10px;
+}
+
+
+
+/* ------------------------------------------- Booking Page ------------------------------------------------------- */
+
+.booking-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d9e5bd;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #faf9f3;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.logoBook {
+    text-align: center;
+}
+
+.logoBook h1 {
+    margin: 0;
+}
+
+.navBook ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navBook ul li {
+    margin: 20px 0;
+}
+
+.navBook ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.main-content {
+    background-color: #fff;
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.booking-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.required {
+    color: red;
+}
+
+#instructor-group {
+    display: none;
+}
+
+.submit-button {
+    margin-top: 1.5rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #fdcc04;
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+    justify-content: center;
+}
+
+.submit-button:hover {
+    background: #ff9514;
+    color: #243cfc;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-content ul li {
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fdcc04;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.modal-content button:hover {
+    background-color: #ff9514;
+    color: #243cfc;
+}
+
+#confirm-address {
+    display: block;
+}
+
+#online-note {
+    display: none;
+    color: red; /* or any other styling you prefer */
+}
+
+

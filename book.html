@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Dance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="booking-page">
+    <div class="container">
+        <div class="sidebar">
+            <div class="logoBook">
+                <a href="/home.html" class="logo">Let's Dance</a>
+            </div>
+            <nav class="navBook">
+                <ul>
+                    <li><a href="home.html#about-us">About Us</a></li>
+                    <li><a href="/classes.html">Classes</a></li>
+                    <li><a href="/instructors.html">Instructors</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                    <li><a><u>Book Now</u></a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#"><img src="/images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="/images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="/images/tik-tok.png" alt="TikTok"></a>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1 class="booking-title">Booking</h1>
+            <form class="booking-form" onsubmit="showConfirmation(event)">
+                <div class="form-group">
+                    <label for="first-name">First Name <span class="required">*</span></label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name <span class="required">*</span></label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="activity">Activity Chosen <span class="required">*</span></label>
+                    <select id="activity" name="activity" required onchange="updateTimeSlots(); toggleInstructor();">
+                        <option value="">Select an activity</option>
+                        <option value="bachata">Bachata</option>
+                        <option value="salsa">Salsa</option>
+                        <option value="meringue">Meringue</option>
+                        <option value="kompa">Kompa</option>
+                        <option value="private">Private Class</option>
+                        <option value="social-nights">Social Nights</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date-time">Date and Time <span class="required">*</span></label>
+                    <select id="date-time" name="date-time" required></select>
+                </div>
+                <div class="form-group" id="instructor-group" style="display:none;">
+                    <label for="instructor">Instructor</label>
+                    <select id="instructor" name="instructor" onchange="updateTimeSlots()">
+                        <option value="">Select an instructor</option>
+                        <option value="alejandro">Alejandro Martinez</option>
+                        <option value="sofia">Sofia Rodriguez</option>
+                        <option value="jean-pierre">Jean-Pierre Baptiste</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="online-class">Online Class</label>
+                    <input type="checkbox" id="online-class" name="online-class" onchange="toggleOnline()">
+                </div>
+                <button type="submit" class="submit-button">Book Now</button>
+            </form>
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>(123) 456-7890</p>
+                <p>123 Dance St, Dance City, DC 45678</p>
+            </div>
+        </div>
+    </div>
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <h2>Confirmation</h2>
+            <p>Your Class Has Been Scheduled!</p>
+            <p>Thank you for booking with us. We look forward to seeing you soon.</p>
+            <p><strong>Details:</strong></p>
+            <ul>
+                <li>Class: <span id="confirm-class"></span></li>
+                <li>Date: <span id="confirm-date"></span></li>
+                <li>Time: <span id="confirm-time"></span></li>
+                <li id="confirm-address">Address: 123 Dance St, Dance City, DC 45678</li>
+                <li>Instructor: <span id="confirm-instructor"></span></li>
+            </ul>
+            <p id="online-note" style="display:none;">A Zoom link will be sent to your email on the day of the class.</p>
+            <p>If you have any questions or need to make changes to your booking, please contact us at (123) 456-7890.</p>
+            <p>Happy Dancing!</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

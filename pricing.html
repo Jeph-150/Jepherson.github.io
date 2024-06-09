@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Let's Dance</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Nav bar -->
+        <nav>
+            <a href="/home.html" class="logo">Let's Dance</a>
+                <div class="nav-items">
+                    <a href="home.html#about-us">About Us</a>
+                    <a href="/classes.html">Classes</a>
+                    <a href="/instructors.html">Instructors</a>
+                    <a><u>Pricing</u></a>
+                    <b><a href="/book.html">Book Now</a></b>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Prices -->
+    <section class="prices" id="prices">
+        <div class="prix">
+            <h1 id="p-title">Our Prices</h1>
+            <div class="price-container">
+                <div class="money">
+                    <h1>Group Class</h1>
+                    <p>Drop In</p>
+                    <h2>$20</h2>
+                    <p>&#10003; Join any group class session</p>
+                    <p>&#10003; Flexible scheduling</p>
+                    <p>&#10003; Perfect for busy individuals</p>
+                    <a href="/book.html"><button>Book now</button></a>
+
+                </div>
+                <div class="money">
+                    <h1>Group Class</h1>
+                    <p>Package</p>
+                    <h2>$160</h2>
+                    <p>&#10003; Access to multiple group classes</p>
+                    <p>&#10003; Discounted rate</p>
+                    <p>&#10003; Great for regular attendees</p>
+                    <a href="/book.html"><button>Book now</button></a>
+                </div>
+                <div class="money">
+                    <h1>Solo Class</h1>
+                    <p>Package</p>
+                    <h2>$280</h2>
+                    <p>&#10003; One-on-one sessions</p>
+                    <p>&#10003; Personalized instruction</p>
+                    <p>&#10003; Focused learning experience</p>
+                    <a href="/book.html"><button>Book now</button></a>
+                </div>
+                <div class="money">
+                    <h1>Social Dance</h1>
+                    <p>Drop in every Saturday night</p>
+                    <h2>$10.50</h2>
+                    <p>&#10003; Join social dance nights</p>
+                    <p>&#10003; Meet new friends</p>
+                    <p>&#10003; Fun, relaxed environment</p>
+                    <a href="/book.html"><button>Book now</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <a href="/">Privacy Policy</a>
+                <a href="/">Terms of Service</a>
+                <a href="/">Contact Us</a>
+            </div>
+            <div class="footer-center">
+                <div class="social-icons">
+                    <a href="#"><img src="/images/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="/images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="/images/tik-tok.png" alt="TikTok"></a>
+                </div>
+                <p>&copy; 2024 Let's Dance. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <p>Address: 123 Dance St, Dance City, DC 45678</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@letsdance.com</p>
+                <p>Monday to Friday: 10am - 9pm</p>
+            </div>
+        </div>
+    </footer>
+
+    </body>
+</html>
+<script>
+    function toggleInstructor() {
+        const activity = document.getElementById('activity').value;
+        const instructorGroup = document.getElementById('instructor-group');
+        if (activity === 'private') {
+            instructorGroup.style.display = 'block';
+        } else {
+            instructorGroup.style.display = 'none';
+        }
+    }
+
+    // Initial call to set the correct state based on the default selection
+    document.addEventListener('DOMContentLoaded', function() {
+        toggleInstructor();
+    });
+</script>
